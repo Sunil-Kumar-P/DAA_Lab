@@ -56,5 +56,6 @@ for(int i=0;i<n;i++)
 arr[i]=i;
 System.out.println("All possible Hamiltonian Cycles in graph ");
 new Hamilton().permute(arr,graph);
+s.close();
 }
 }

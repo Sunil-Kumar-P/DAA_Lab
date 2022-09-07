@@ -10,7 +10,7 @@ public class add {
 		b=sc.nextInt();
 		c=a+b;
 		System.out.println("The answer is:" +c);
-
+		sc.close();
 	}
 
 }

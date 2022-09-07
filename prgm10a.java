@@ -39,11 +39,10 @@ public class prgm10a {
 			for (int j=0;j<n;j++) {
 				a[i][j]=scan.nextInt();
 			}
-			
 		}
 		System.out.println("Resultant is ");
 		f.dis_path(n, a);
-		
+		scan.close();
 	}
 
 }

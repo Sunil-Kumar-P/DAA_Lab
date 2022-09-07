@@ -37,7 +37,7 @@ public class ExceptonDemo {
 	
 	
 	public static void main(String[] args) {
-		int a,b,result,option;
+		int a,b,option;
 		ExceptonDemo edemo = new ExceptonDemo();
 		Scanner scan = new Scanner(System.in);
 		
@@ -55,6 +55,7 @@ public class ExceptonDemo {
 			edemo.withMyException(a, b);
 		else 
 			System.out.println("Invalid option");
+			scan.close();
 	}
 
 }

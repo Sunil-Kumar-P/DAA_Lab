@@ -64,8 +64,11 @@ public class kruskal {
 				edge[k][0]=j;
 				edge[k++][2]=a[i][j];
 			}
-		java.util.Arrays.sort(edge,new java.util.Comparator<int[]>() {
-			return Integer.compare(a[2],b[2]);
+		// java.util.Arrays.sort(edge,new java.util.Comparator<int[]>() {
+			java.util.Arrays.sort(edge, new java.util.Comparator<int[]>() {
+				public int compare(int[] a, int[] b) {
+					return Integer.compare(a[2],b[2]);
+				}
 		});
 		KruskalAlgo(edge,n);
 		s.close();

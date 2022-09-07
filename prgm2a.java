@@ -12,6 +12,7 @@ class staff {
 		sal = scan.nextLine();
 		System.out.println("Staff phone:\t");
 		phone = scan.nextLine();
+		scan.close();
 	}
 	void display() {
 		System.out.println("Staff ID:\t"+staffid);
@@ -20,7 +21,6 @@ class staff {
 		System.out.println("Phone:\t"+phone);
 	}
 }
-
 class teaching extends staff {
 	String domain, pub;
 	Scanner scan =new Scanner(System.in);
@@ -37,7 +37,6 @@ class teaching extends staff {
 		System.out.println("Publication\t"+pub);
 	}
 }
-
 class technical extends staff {
 	String skills;
 	Scanner scan =new Scanner(System.in);
@@ -49,10 +48,8 @@ class technical extends staff {
 	void display_tech() {
 		super.display();
 		System.out.println("Skills\t"+skills);
-
 	}
 }
-
 class contract extends staff {
 	String period;
 	Scanner scan =new Scanner(System.in);
@@ -60,15 +57,12 @@ class contract extends staff {
 		super.read();
 		System.out.println("Staff period:\t");
 		period = scan.nextLine();
-
 	}
 	void display_con() {
 		super.display();
 		System.out.println("Period\t"+period);
-
 	}
 }
-
 public class prgm2a {
 	public static void main(String[] args) {
 		Scanner scan =new Scanner(System.in);
@@ -81,30 +75,23 @@ public class prgm2a {
 		for (int i=0;i<n;i++) {
 			st[i] = new teaching();
 			st[i].read_teach();
-
 		}
 		System.out.println("Enter technical staff");
 		for (int i=0;i<n;i++) {
 			stech[i] = new technical();
 			stech[i].read_tech();
-
-			
 		}
 		System.out.println("Enter contract staff");
 		for (int i=0;i<n;i++) {
 			scon[i] = new contract();
 			scon[i].read_con();
-			
 		}
-		
 		System.out.println("Detials of  staff");
 		for (int i=0;i<n;i++) {
 			st[i].display_teach();
 			stech[i].display_tech();
-			scon[i].display_con();
-			
+			scon[i].display_con();	
 		}
-
+		scan.close();
 	}
-
 }

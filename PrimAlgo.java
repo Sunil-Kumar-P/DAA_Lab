@@ -22,23 +22,18 @@ class Prim {
 					}
 				}
 			}
-
 				visit[v]=1;
 				min_cost+=min;
 				nv++;
 				System.out.printf("Edge %d -%d : (%d)\n",u,v,min);
-			
 		}
 		System.out.println("cost : "+min_cost);
 	}
 }
-
-
 public class PrimAlgo {
-
 	public static void main(String[] args) {
 		int[][] adj;
-		int N,i,j,S,D;
+		int N,i,j;
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter number of nodes");
 		N=sc.nextInt();
@@ -56,6 +51,6 @@ public class PrimAlgo {
 			}
 		}
 		Prim.my_prim(adj, N);
+		sc.close();
 	}
-
 }

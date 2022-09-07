@@ -3,16 +3,14 @@ import java.util.Scanner;
 class stack {
 	int elem,max,top;
 	int[] st;
-	
 	public stack() {
 		Scanner scan = new Scanner(System.in);
 		System.out.println("enter the size of stack");
 		max = scan.nextInt();
 		st = new int[max];
 		top = -1;
-		
+		scan.close();
 	}
-	
 	public void push(int elem) {
 		if (top == max-1) {
 			System.out.println("Stack Overflow");
@@ -21,7 +19,6 @@ class stack {
 			st[++top] = elem;
 		}
 	}
-	
 	public int pop() {
 		
 		if (top == -1) {
@@ -42,12 +39,8 @@ class stack {
 				System.out.printf(" %d ",st[i]);
 			}
 		}
-		
 	}
 }
-
-
-
 public class prg1b {
 	static int option;
 	public static void main(String[] args) {
@@ -57,7 +50,6 @@ public class prg1b {
 			System.out.println("\nEnter Your choice \n1.PUSH\n2.POP\n3.DISPLAY\n4.EXIT");
 			Scanner scan = new Scanner(System.in);
 			option = scan.nextInt();
-			
 			switch(option) {
 			case 1: System.out.println("Enter Element");
 					obj.elem = scan.nextInt();
@@ -69,7 +61,7 @@ public class prg1b {
 					break;
 			case 4: System.exit(0);
 					default:System.out.println("wrong option");
-			
+			scan.close();
 			}
 		}
 		

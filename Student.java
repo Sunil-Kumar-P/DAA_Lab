@@ -30,7 +30,7 @@ public class Student {
 		for(int i=0;i<n;i++) {
 			s[i].display();
 		}
-
+		scan.close();
 	}
 
 }

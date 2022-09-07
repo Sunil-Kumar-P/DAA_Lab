@@ -1,18 +1,13 @@
 import java.util.Scanner;
 import java.util.StringTokenizer;
 
-
-
 public class prgm2b {
-
 	public static void main(String[] args) {
 		Customer c = new Customer();
 		c.read();
 		c.display();
 	}
-
 }
-
 class Customer {
 	String name,DOB;
 	void read() {
@@ -20,6 +15,7 @@ class Customer {
 		System.out.println("Enter Name and Date of Birth");
 		name = scan.next();
 		DOB = scan.next();
+		scan.close();
 	}
 	void display() {
 		StringTokenizer st = new StringTokenizer(DOB,"/");

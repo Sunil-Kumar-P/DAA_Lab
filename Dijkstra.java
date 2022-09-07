@@ -40,7 +40,7 @@ public class Dijkstra {
 		visited[source]=1;
 		d[source]=0;
 		int u=source;
-		int v,a=0;
+		int v;
 		do {
 			for(v=1;v<n+1;v++) {
 				if(visited[v]!=1) {
@@ -54,7 +54,7 @@ public class Dijkstra {
 		}while(check(visited,n));
 		for(i=1;i<n+1;i++)
 			System.out.println("Distance From Source To"+i+"is"+d[i]);
-
+		s.close();
 	}
 
 }
